@@ -24,6 +24,7 @@ declare module 'adventure-acl' {
     
     export class MongoClient {
         constructor(config: MongoClientConfigInterface, mongoOptions: MongoConnectOptions);
+        constructor(config: MongoClientConfigInterface);
         public connect(): Promise<void>;
         public get connection(): MongoConnection;
     }
