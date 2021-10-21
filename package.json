@@ -2,6 +2,7 @@
   "name": "adventure-acl",
   "version": "1.0.0",
   "description": "The tool as a ACL  for services to establish communication with DBs and MQ",
+  "private": true,
   "main": "./index.js",
   "types": "./index.d.ts",
   "scripts": {},
