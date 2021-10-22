@@ -1,6 +1,10 @@
 declare module 'adventure-acl' {
-    import { Connection as MongoConnection, ConnectOptions as MongoConnectOptions } from "mongoose";
     import { Connection as MQConnection } from "amqplib";
+    import { 
+        Connection as MongoConnection,
+        ConnectOptions as MongoConnectOptions,
+        Model as MongoModel
+    } from "mongoose";
 
     // MQ Client
     export interface MQClientConfigInterface {
@@ -28,5 +32,12 @@ declare module 'adventure-acl' {
         public connect(): Promise<void>;
         public get connection(): MongoConnection;
     }
+
+    // Mongo Models
+    export interface MongoModelInterface {
+        [modelName: string]: MongoModel;
+    }
+
+    export const models: MongoModelInterface;
 }
 
