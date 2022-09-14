@@ -1,5 +1,14 @@
-const UserModel = require('./UserModel');
+const UserModel = require('./UserModel')
 
-module.exports = {
-    UserModel,
-};
+class MongoModels {
+    constructor() {
+        this._models = {
+            UserModel,
+        }
+    }
+    get models() {
+        return this._models
+    }
+}
+
+module.exports = MongoModels
