@@ -32,15 +32,5 @@ declare module 'adventure-acl' {
         public connect(): Promise<void>
         public get connection(): MongoConnection
     }
-
-    // Mongo Models
-    export interface MongoModelInterface {
-        UserModel: MongoModel
-    }
-
-    export class MongoModels {
-        constructor()
-        public get models(): MongoModelInterface
-    }
 }
 
